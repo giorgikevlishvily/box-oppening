@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Opening Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="game-container">
+    <header>
+        <h1>Box Opening Game</h1>
+    </header>
+
+    <!-- Special Event Boxes -->
+    <section class="special-event">
+        <h2>Special Event Boxes</h2>
+        <button onclick="openBox('halloween')">🎃 Halloween Box</button>
+        <button onclick="openBox('christmas')">🎄 Christmas Box</button>
+    </section>
+
+    <!-- Box Buttons -->
+    <section class="box-buttons">
+        <button onclick="openBox('brawl')">Brawl Box</button>
+        <button onclick="openBox('big')">Big Box</button>
+        <button onclick="openBox('mega')">Mega Box</button>
+    </section>
+
+    <!-- Display Rewards -->
+    <div class="reward-display" id="reward"></div>
+
+    <!-- Inventory -->
+    <section class="inventory">
+        <h2>Player Inventory</h2>
+        <div id="inventory"></div>
+    </section>
+
+    <!-- Mini Game Section -->
+    <section class="mini-game">
+        <h2>Mini-Game: Catch the Box!</h2>
+        <button onclick="startMiniGame()">Start Game</button>
+        <div id="miniGameArea"></div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
