@@ -3,47 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Opening Game</title>
+    <title>Brawl Stars Box Opening Game with Brawler Exchange</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Brawl Stars Box Opening Game</h1>
 
-<div class="game-container">
-    <header>
-        <h1>Box Opening Game</h1>
-    </header>
+        <!-- Box Opening Section -->
+        <div class="box-container">
+            <select id="boxSelect">
+                <option value="brawl">Brawl Box</option>
+                <option value="big">Big Box</option>
+                <option value="mega">Mega Box</option>
+                <option value="dead">Dead Box</option>
+                <option value="legend">Legend Box</option>
+                <option value="skin">Skin Box</option>
+            </select>
+            <button id="openBox">Open Box</button>
+        </div>
+        <div id="boxAnimation" class="box-animation">🎁</div>
+        <div id="result" class="result"></div>
 
-    <!-- Special Event Boxes -->
-    <section class="special-event">
-        <h2>Special Event Boxes</h2>
-        <button onclick="openBox('halloween')">🎃 Halloween Box</button>
-        <button onclick="openBox('christmas')">🎄 Christmas Box</button>
-    </section>
-
-    <!-- Box Buttons -->
-    <section class="box-buttons">
-        <button onclick="openBox('brawl')">Brawl Box</button>
-        <button onclick="openBox('big')">Big Box</button>
-        <button onclick="openBox('mega')">Mega Box</button>
-    </section>
-
-    <!-- Display Rewards -->
-    <div class="reward-display" id="reward"></div>
-
-    <!-- Inventory -->
-    <section class="inventory">
+        <!-- Inventory Section -->
         <h2>Player Inventory</h2>
-        <div id="inventory"></div>
-    </section>
+        <div id="inventory" class="inventory"></div>
 
-    <!-- Mini Game Section -->
-    <section class="mini-game">
-        <h2>Mini-Game: Catch the Box!</h2>
-        <button onclick="startMiniGame()">Start Game</button>
-        <div id="miniGameArea"></div>
-    </section>
-</div>
+        <!-- Mini Games Section -->
+        <h2>Mini Games</h2>
+        <div class="mini-games">
+            <button id="playRPS">Play Rock, Paper, Scissors</button>
+            <button id="playGuessNumber">Play Guess the Number</button>
+        </div>
+        <div id="gameResult" class="result"></div>
 
-<script src="script.js"></script>
+        <!-- Brawler Exchange Section -->
+        <h2>Brawler Exchange</h2>
+        <button id="exchangeBrawler">Exchange a Brawler</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
