@@ -175,3 +175,70 @@ h2 {
         transform: translateY(-15px);
     }
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tips-box, .tooltip {
+    background: #ffcc00;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mini-game {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #e7f3ff;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#treasureGrid, #memoryGrid, #dodgeballArea, #triviaAnswers {
+    margin-top: 15px;
+}
