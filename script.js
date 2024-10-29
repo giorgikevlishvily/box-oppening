@@ -135,27 +135,23 @@ function exchangeBrawler() {
         alert("Invalid brawler selection or brawler not in inventory.");
     }
 }
-function upgradeBrawler(brawlerName) {
-    const brawler = brawlers.find(b => b.name === brawlerName);
-    if (brawler && playerTokens >= brawler.upgradeCost) {
-        playerTokens -= brawler.upgradeCost;
-        brawler.attackPower += 5; // Example upgrade increment
-        brawler.upgradeCost *= 2; // Increase cost for next upgrade
-        console.log(`${brawler.name} has been upgraded!`);
+
+// JavaScript for toggling inventory display
+document.getElementById('toggleInventory').addEventListener('click', function () {
+    const inventory = document.getElementById('inventory');
+    // Toggle the display style
+    if (inventory.style.display === 'none') {
+        inventory.style.display = 'block';
+        this.textContent = 'Hide Inventory'; // Change button text
     } else {
-        console.log("Not enough tokens to upgrade!");
+        inventory.style.display = 'none';
+        this.textContent = 'Show Inventory'; // Change button text
     }
-}
+});
 
-// Assume playerTokens is defined elsewhere in your game logic
-let playerTokens = 100; // Example starting tokens
-function gainXP(brawlerName, amount) {
-    const brawler = brawlers.find(b => b.name === brawlerName);
-    if (brawler) {
-        brawler.xp += amount;
-        if (brawler.xp >= brawler.maxXP) {
-            levelUp(brawler);
-        }
-    }
-}
-
+// Sample box opening function (you can expand this with your actual logic)
+document.getElementById('openBox').addEventListener('click', function () {
+    const boxSelect = document.getElementById('boxSelect').value;
+    const result = document.getElementById('boxResult');
+    result.innerHTML = `You opened a ${boxSelect}!`; // Example result
+});
